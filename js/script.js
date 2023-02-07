@@ -32,9 +32,9 @@ new Swiper('.hero__footer', {
   spaceBetween: (body.offsetWidth / 1200 * 148),
   slidesPerView:'auto',
   loop: true,
-  // autoplay: {           // автопрокрутка
-  //   delay: 1000,        // затримка
-  //   stopOnLastSlide: false,  // стоп на останньому
-  //   disableOnInteraction: false,  // викл після ручного перемикання
-  // },
+  autoplay: {           // автопрокрутка
+    delay: 1000,        // затримка
+    stopOnLastSlide: false,  // стоп на останньому
+    disableOnInteraction: false,  // викл після ручного перемикання
+  },
 });

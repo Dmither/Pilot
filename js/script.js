@@ -1,6 +1,8 @@
 let burger = document.querySelector('.burger');
 let menu = document.querySelector('.menu');
 let body = document.body;
+console.log(body.offsetWidth)
+console.log( body.offsetWidth / 1200 * 148)
 
 burger.addEventListener('click', function(){
   burger.classList.toggle('burger_active');
@@ -27,12 +29,12 @@ new Swiper('.hero__footer', {
     onlyInViewport: true, // тільки в межах в'юпорта
     pageUpDown: false,   // клавішами pageUp, pageDown
   },
-  spaceBetween: 148,
+  spaceBetween: (body.offsetWidth / 1200 * 148),
   slidesPerView:'auto',
   loop: true,
-  autoplay: {           // автопрокрутка
-    delay: 1000,        // затримка
-    stopOnLastSlide: false,  // стоп на останньому
-    disableOnInteraction: false,  // викл після ручного перемикання
-  },
+  // autoplay: {           // автопрокрутка
+  //   delay: 1000,        // затримка
+  //   stopOnLastSlide: false,  // стоп на останньому
+  //   disableOnInteraction: false,  // викл після ручного перемикання
+  // },
 });

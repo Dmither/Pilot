@@ -304,6 +304,14 @@ body {
   max-width: 19.5rem;
   border-bottom: 1px solid rgba(25, 116, 206, 0.5019607843);
 }
+@media (min-width: 992px) {
+  .card:first-child {
+    transform: translate(0, -12.5rem);
+  }
+  .card:last-child {
+    transform: translate(0, 8rem);
+  }
+}
 @media (max-width: 767px) {
   .card {
     margin-bottom: 1.875rem;

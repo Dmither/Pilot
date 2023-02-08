@@ -307,6 +307,14 @@ body{
   width: 100%;
   max-width: 19.5rem;
   border-bottom: 1px solid #1974CE80;
+  @media (min-width: 992px) {
+    &:first-child{
+      transform: translate(0, -12.5rem);
+    }
+    &:last-child{
+      transform: translate(0, 8rem);
+    }
+  }
   @media (max-width: 767px) {
     margin-bottom: 1.875rem;
     max-width: 100%;

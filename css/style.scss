@@ -15,7 +15,6 @@ body{
 .container{
   width: 100%;
   padding: 1.69rem 2rem;
-  background-color: #1974CE;
 }
 .btn{
   font-size: inherit;
@@ -90,7 +89,8 @@ body{
 
 .menu {
   display: flex;
-  column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   &__link {
     display: block;
     line-height: 1.31; 
@@ -113,6 +113,7 @@ body{
     align-items: center;
     &__link{
       padding: 0.5rem;
+      font-size: 20px;
     }
   }
   &_active{
@@ -121,10 +122,12 @@ body{
 }
 
 .header {
+  position: -webkit-sticky;
   position: sticky;
   z-index: 2;
   top: 0;
   width: 100%;
+  background-color: #1974CE;
   &__container{
     display: flex;
     justify-content: space-between;
@@ -137,11 +140,10 @@ body{
 }
 
 
-// --------------------------------------------------------------------
+// hero ---------------------------------------------------------------
 
-.main {
-}
 .hero {
+  background-color: #1974CE;
   &__container{
     padding-top: calc(1.43rem + (71) * (100vw - 320px) / (1200 - 320));
     padding-bottom: calc(1.43rem + (71) * (100vw - 320px) / (1200 - 320));
@@ -177,19 +179,10 @@ body{
     max-width: 26.25rem;
     padding: 0.875rem 0 1.125rem;
   }
-  &__categories {
-  }
-  &__categories-body {
-  }
   &__categories-slide {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-  &__categories-item {
-  }
-  &__footer {
-
   }
   &__footer-slide{
     width: auto;
@@ -260,11 +253,118 @@ body{
     background-color: #1974CE80;
   }
 }
-.hero {
-		
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
 
+
+// steps --------------------------------------------------------------
+
+.steps {
+  padding: 92px 0 170px;
+  padding-top: calc(1.43rem + (70) * (100vw - 320px) / (1200 - 320));
+  padding-bottom: calc(2.14rem + (140) * (100vw - 320px) / (1200 - 320));
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__header{
+    align-self: center;
+    width: 100%;
+    max-width: 60.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: calc(2.145rem + (25) * (100vw - 320px) / (1200 - 320));
+    @media (max-width: 991px) {align-items: center;}
+  }
+  &__header-wrapper{
+    max-width: 575px;
+    color: #1A4359;
+  }
+  &__title {
+    margin-bottom: calc(2.145rem + (25) * (100vw - 320px) / (1200 - 320));
+    font-family: 'Roboto';
+    font-size: calc(2.15rem + (15) * (100vw - 320px) / (1200 - 320));
+    line-height: 1.07;
+  }
+  &__subtitle {
+    font-size: calc(1rem + (4) * (100vw - 320px) / (1200 - 320));
+    line-height: 1.16;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(292px, 312px));
+    justify-content: space-between;
+    gap: 1.875rem;
+    @media (max-width: 991px) {
+      display: flex;
+      justify-content: space-around;
+    }
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+}
+.card {
+  width: 100%;
+  max-width: 19.5rem;
+  border-bottom: 1px solid #1974CE80;
+  @media (max-width: 767px) {
+    margin-bottom: 1.875rem;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1.25rem;
+  }
+  @media (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  &__img {
+    width: 100%;
+    position: relative;
+    margin-bottom: 21px;
+    @media (max-width: 767px) {
+      grid-row: span 2;
+    }
+    @media (max-width: 479px) {
+      width: 200px;
+
+    }
+    img{
+      width: 100%;
+      border-radius: 8px;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center;
+    }
+  }
+  &__number{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A4359;
+    line-height: 1.3;
+    color: #FBF9F3;
+  }
+  &__title {
+    margin-bottom: 19px;
+    font-family: 'Roboto';
+    font-size: calc(1.25rem + (10) * (100vw - 320px) / (1200 - 320));
+    line-height: 1.07;
+    color: #1974CE;
+  }
+  &__descrioption {
+    font-size: calc(0.8125rem + (3) * (100vw - 320px) / (1200 - 320));
+    margin-bottom: 22px;
+    line-height: 1.3;
+    color: #1A4359;
+  }
+}

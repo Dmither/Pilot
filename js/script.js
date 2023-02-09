@@ -92,3 +92,31 @@ new Swiper('.stories__reviews', {
   watchOverflow: true,
   spaceBetween: 23,
 })
+
+
+// category ----------------------------------------------------------
+
+let categories = document.querySelectorAll('.category');
+let categoriesHeight = [];
+window.addEventListener('load', function(){
+  if (body.clientWidth < 768){
+    for (let i = 0; i < categories.length; i++){
+      categoriesHeight[i] = categories[i].children[1].clientHeight;
+      categories[i].children[1].style.height = '1px'
+    }
+  }
+  for (let i = 0; i < categories.length; i++){
+    categories[i].children[0].addEventListener('click', function(){
+      if (categories[i].children[1].clientHeight <= 1){
+        for (let i = 0; i < categories.length; i++){
+          categories[i].children[1].style.height = '1px'
+        }
+        categories[i].children[1].style.height = String(categoriesHeight[i]) + 'px'
+      } else {
+        for (let i = 0; i < categories.length; i++){
+          categories[i].children[1].style.height = '1px'
+        }
+      }
+    })
+  }
+})

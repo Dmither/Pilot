@@ -495,6 +495,7 @@ body {
   font-size: 15px;
   line-height: 1.39;
 }
+
 .stars {
   font-size: 11px;
   line-height: 1.31;
@@ -623,7 +624,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: calc(26px + 90 * (100vw - 320px) / 880);
-       column-gap: calc(26px + 90 * (100vw - 320px) / 880);
+  column-gap: calc(26px + 90 * (100vw - 320px) / 880);
 }
 @media (max-width: 767px) {
   .procedures__body {
@@ -650,7 +651,6 @@ body {
 }
 
 .category__header {
-  margin-bottom: 28px;
   margin-bottom: calc(8px + 20 * (100vw - 320px) / 880);
   cursor: default;
 }
@@ -661,7 +661,6 @@ body {
 }
 .category__title {
   font-family: "Roboto";
-  font-size: 30px;
   font-size: calc(1.57rem + 8 * (100vw - 320px) / 880);
   line-height: 1.07;
   color: #1974CE;
@@ -670,14 +669,12 @@ body {
   overflow: hidden;
 }
 .category__description {
-  font-size: 17px;
   font-size: calc(1rem + 3 * (100vw - 320px) / 880);
   line-height: 1.38;
   padding-bottom: calc(8px + 5 * (100vw - 320px) / 880);
   border-bottom: 1px solid rgba(25, 116, 206, 0.5019607843);
 }
 .category__items a {
-  padding-top: 17px;
   padding-top: calc(8px + 9 * (100vw - 320px) / 880);
   padding-bottom: calc(7px + 8 * (100vw - 320px) / 880);
   display: flex;
@@ -710,4 +707,127 @@ body {
   .category__items {
     margin-bottom: 20px;
   }
+}
+
+.team {
+  padding-top: calc(22px + 80 * (100vw - 320px) / 880);
+  padding-bottom: calc(24px + 82 * (100vw - 320px) / 880);
+}
+@media (max-width: 479px) {
+  .team__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.team__title {
+  margin-bottom: calc(17px + 45 * (100vw - 320px) / 880);
+  max-width: 377px;
+  font-size: calc(2.285rem + 16 * (100vw - 320px) / 880);
+  line-height: 1;
+  color: #1974CE;
+}
+.team__description {
+  margin-bottom: calc(24px + 80 * (100vw - 320px) / 880);
+  font-size: calc(1rem + 2 * (100vw - 320px) / 880);
+  max-width: 335px;
+  line-height: 1.5;
+}
+.team__cards {
+  margin-bottom: 73px;
+  margin-bottom: calc(23px + 50 * (100vw - 320px) / 880);
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+@media (max-width: 479px) {
+  .team__cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+.team__card {
+  display: block;
+  max-width: 310px;
+  line-height: 1;
+  border-bottom: 1px solid rgba(26, 67, 89, 0.3019607843);
+  color: inherit;
+}
+@media (max-width: 479px) {
+  .team__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.team__photo {
+  margin-bottom: 16px;
+  width: 100%;
+  aspect-ratio: 360/385;
+  overflow: hidden;
+  position: relative;
+}
+.team__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 479px) {
+  .team__photo {
+    max-width: 150px;
+  }
+}
+.team__card-name {
+  margin-bottom: 7px;
+  font-size: calc(22px + 6 * (100vw - 320px) / 880);
+}
+.team__card-position {
+  margin-bottom: 4px;
+  font-size: calc(14px + 2 * (100vw - 320px) / 880);
+  line-height: 1.2;
+}
+.team__card-branch {
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-size: calc(11px + 2 * (100vw - 320px) / 880);
+  line-height: 1.29;
+}
+.team__card:focus .team__photo img, .team__card:hover .team__photo img {
+  transform: scale(1.05);
+}
+.team__card:focus .team__photo::after, .team__card:hover .team__photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(215, 234, 146, 0.3137254902);
+}
+.team__all {
+  margin: 0 auto;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 14px 25px 18px;
+  border-radius: 8px;
+  border: 1px solid #1A4359;
+  color: inherit;
+  transition: all 0.1s ease 0s;
+}
+@media (max-width: 479px) {
+  .team__all {
+    padding: 12px 22px 15px;
+  }
+}
+.team__all:hover, .team__all:focus {
+  outline: none;
+  border: 1px solid #1974CE;
+  background-color: #fff;
+  color: #1974CE;
 }/*# sourceMappingURL=style.css.map */

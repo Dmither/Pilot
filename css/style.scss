@@ -343,8 +343,7 @@ body{
       grid-row: span 2;
     }
     @media (max-width: 479px) {
-      width: 200px;
-
+      width: 100px;
     }
     img{
       width: 100%;
@@ -367,6 +366,12 @@ body{
     background-color: #1A4359;
     line-height: 1.3;
     color: #FBF9F3;
+    @media (max-width: 479px) {
+      top: 8px;
+      left: 8px;
+      width: 32px;
+      height: 32px;
+    }
   }
   &__title {
     margin-bottom: 19px;

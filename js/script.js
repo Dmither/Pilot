@@ -98,7 +98,8 @@ new Swiper('.stories__reviews', {
 
 let categories = document.querySelectorAll('.category');
 let categoriesHeight = [];
-window.addEventListener('load', function(){
+
+function categoryLoad(){
   if (body.clientWidth < 768){
     for (let i = 0; i < categories.length; i++){
       categoriesHeight[i] = categories[i].children[1].clientHeight;
@@ -119,4 +120,45 @@ window.addEventListener('load', function(){
       }
     })
   }
+}
+
+
+
+
+// footer ------------------------------------------------------------
+
+let spoilers = document.querySelectorAll('.spoiler')
+console.log(spoilers);
+let summariesHeight = [];
+
+function footerLoad(){
+  if (body.clientWidth < 768){
+    for (let i = 0; i < spoilers.length; i++){
+      summariesHeight[i] = spoilers[i].children[1].clientHeight;
+      spoilers[i].children[1].style.height = '1px'
+    }
+    for (let i = 0; i < spoilers.length; i++){
+      spoilers[i].children[0].addEventListener('click', function(){
+        console.log(spoilers[i])
+        if (spoilers[i].children[1].clientHeight <= 1){
+          for (let i = 0; i < spoilers.length; i++){
+            spoilers[i].children[1].style.height = '1px'
+          }
+          spoilers[i].children[1].style.height = String(summariesHeight[i]) + 'px'
+        } else {
+          for (let i = 0; i < spoilers.length; i++){
+            spoilers[i].children[1].style.height = '1px'
+          }
+        }
+      })
+    }
+  }
+}
+
+
+// load window -------------------------------------------------------
+
+window.addEventListener('load', function(){
+  categoryLoad();
+  footerLoad();
 })

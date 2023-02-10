@@ -882,3 +882,120 @@ body{
     img{width: 100%;}
   }
 }
+
+
+
+
+
+
+// footer ------------------------------------------------------------
+
+.footer {
+  padding-top: calc(23px + (40) * (100vw - 320px) / (1200 - 320));
+  background-color: #1974CE;
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__flags {
+    align-self: end;
+    @media (max-width: 767px) {
+      align-self: start;
+      margin-bottom: 20px;
+    }
+  }
+  &__treat {
+    
+  }
+  &__about {
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    margin-bottom: calc(10px + (15) * (100vw - 320px) / (1200 - 320));
+    font-size: 1.45rem;
+    line-height: 1.25;
+    color: #fff;
+    @media (min-width: 768px) {
+      cursor: default;
+    }
+  }
+  &__list {
+    overflow: hidden;
+    transition: all 0.1s ease 0s;
+    li:last-child{
+      margin-bottom: 20px;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 0.5em 0;
+    font-size: 16px;
+    line-height: 1;
+    color: #fff;
+    &:hover, &:focus{
+      color: #FFFFFFB2;
+    }
+  }
+  &__supported {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #fff;
+    p{width: 100%;}
+    img{
+      width: min-content;
+    }
+    @media (max-width: 767px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      column-gap: 0;
+      img{
+        width: min-content;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 48px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    li{
+      padding: 0 16px;
+      @media (max-width: 767px) {
+        padding: 16px 0;
+        width: 100%;
+        text-align: center;
+      }
+      &:not(:last-child){
+        border-right: 1px solid #FFFFFFB2;
+        @media (max-width: 767px) {
+          border-right: 0px solid #FFFFFFB2;
+          border-bottom: 1px solid #FFFFFFB2;
+        }
+      }
+      a{
+        font-size: 12px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: #FFFFFFB2;
+        &:hover, &:focus{
+          color: #fff;
+        }
+      }
+    }
+  }
+}

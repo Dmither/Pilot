@@ -857,4 +857,47 @@ body {
   border: 1px solid #1974CE;
   background-color: #fff;
   color: #1974CE;
+}
+
+.levelup {
+  padding-top: calc(29px + 60 * (100vw - 320px) / 880);
+  padding-bottom: calc(24px + 40 * (100vw - 320px) / 880);
+  background-color: #1974CE;
+}
+.levelup__container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: calc(0px + 68 * (100vw - 320px) / 880);
+}
+@media (max-width: 767px) {
+  .levelup__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.levelup__title {
+  margin-bottom: calc(20px + 34 * (100vw - 320px) / 880);
+  max-width: 528px;
+  font-size: calc(3rem + 54 * (100vw - 320px) / 880);
+  line-height: 1;
+  color: #FBF9F3;
+}
+.levelup__description {
+  margin-bottom: calc(14px + 4 * (100vw - 320px) / 880);
+  font-size: calc(1rem + 4 * (100vw - 320px) / 880);
+  line-height: 1.3;
+  color: #FBF9F3;
+}
+.levelup__btn {
+  display: inline-block;
+  padding: 17px 24px 21px;
+  color: inherit;
+}
+.levelup__img {
+  width: calc(164px + 300 * (100vw - 320px) / 880);
+}
+.levelup__img img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
